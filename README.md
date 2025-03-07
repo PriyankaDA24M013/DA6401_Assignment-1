@@ -7,14 +7,16 @@ The flow of the code is as follows:
 
 Supporting Files:
 
-1.dataset.py: Loads and preprocesses the dataset.
+1. dataset.py: Loads and preprocesses the dataset.
 
-2.activation.py: Provides activation functions and their derivatives.
+2. activation.py: Provides activation functions and their derivatives.
 
-3.loss.py: Implements loss functions and their derivatives.
+3. loss.py: Implements loss functions and their derivatives.
 
-4.model.py: Defines the FeedForwardNN class for the neural network.
+4. model.py: Defines the FeedForwardNN class for the neural network.
 
-5.optimizer.py: Implements various optimizers (SGD, Momentum, NAG, RMSprop, Adam, Nadam).
+5. optimizer.py: Implements various optimizers (SGD, Momentum, NAG, RMSprop, Adam, Nadam).
 
-6.utils.py: Contains utility functions like accuracy, one_hot_encode, and initialize_weights
+6. utils.py: Contains utility functions like accuracy, one_hot_encode, and initialize_weights
+
+WandB Report Link - 
