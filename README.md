@@ -23,6 +23,6 @@ Supporting Files:
 
 6. utils.py: Contains utility functions like accuracy, one_hot_encode, and initialize_weights
 
-WandB Report Link - https://wandb.ai/da24m013-iit-madras-alumni-association/DA6401-A1/reports/DA24M013-Assignment-1-Report--VmlldzoxMTU3NTYyNg
-
 Github Repo Link - https://github.com/PriyankaDA24M013/DA6401_Assignment-1.git
+
+WandB Report Link - https://wandb.ai/da24m013-iit-madras-alumni-association/DA6401-A1/reports/DA24M013-Assignment-1-Report--VmlldzoxMTU3NTYyNg
