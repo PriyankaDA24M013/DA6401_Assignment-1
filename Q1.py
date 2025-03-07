@@ -13,7 +13,7 @@ class_names = [
 ]
 
 # Initialize wandb
-wandb.init(project="DA6401-A1", name="fashion-mnist-samples-plot")
+wandb.init(project="DA6401-A1", entity="da24m013-iit-madras-alumni-association",name="fashion-mnist-samples-plot")
 
 # Store one image per class
 sample_images = {}
@@ -37,7 +37,7 @@ plt.tight_layout()
 plt.show()
 
 # Log plot to wandb
-wandb.log({"Fashion-MNIST Samples": wandb.Image(fig)})
+wandb.log({"Q1 Sample Images": wandb.Image(fig)})
 
 # End wandb run
 wandb.finish()
