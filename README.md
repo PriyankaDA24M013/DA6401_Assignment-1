@@ -1,12 +1,13 @@
 # DA6401_Assignment-1
 
 **Q1.py** contains the code to plot the fashion_mnist data samples of each class
+
 **Q7_cn** plots the confusion matrix and prints test accuracy on trained model which is saved as _model_weights.npy_
 
 The flow of the code is as follows:
 1. Run _sweep.py_ to find the best hyperparameters.
 2. Use the best hyperparameters to train the model for more epochs using _train.py_
-3. 
+
 Supporting Files:
 
 1. dataset.py: Loads and preprocesses the dataset.
@@ -22,4 +23,5 @@ Supporting Files:
 6. utils.py: Contains utility functions like accuracy, one_hot_encode, and initialize_weights
 
 WandB Report Link - 
+
 Github Repo Link -
