@@ -25,4 +25,4 @@ Supporting Files:
 
 Github Repo Link - https://github.com/PriyankaDA24M013/DA6401_Assignment-1.git
 
-WandB Report Link - https://wandb.ai/da24m013-iit-madras-alumni-association/DA6401-A1/reports/DA24M013-Assignment-1-Report--VmlldzoxMTU3NTYyNg
+WandB Report Link - https://api.wandb.ai/links/da24m013-iit-madras-alumni-association/sbn1ajyu
