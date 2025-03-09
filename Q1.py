@@ -1,10 +1,12 @@
-import numpy as np
-import matplotlib.pyplot as plt
+import os
 import wandb
 from keras.datasets import fashion_mnist
 
+
+os.environ['WAND_NOTEBOOK_NAME']='ques1'
+
 # Load Fashion-MNIST dataset
-(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+(X_train,Y_train),(X_test,Y_test) = fashion_mnist.load_data()
 
 # Define class names
 class_names = [
@@ -13,31 +15,19 @@ class_names = [
 ]
 
 # Initialize wandb
-wandb.init(project="DA6401-A1", entity="da24m013-iit-madras-alumni-association",name="fashion-mnist-samples-plot")
+wandb.init(project="DA6401-A1", entity="da24m013-iit-madras-alumni-association", name="fashion-mnist-samples-chart")
 
 # Store one image per class
-sample_images = {}
-for img, label in zip(train_images, train_labels):
-    if label not in sample_images:
-        sample_images[label] = img
-    if len(sample_images) == 10:
-        break
+classes=['T-shirt/top','Trouser','Pullover','Dress','Coat','Sandal','Shirt','Sneaker','Bag','Ankle boot']
+sample_image=[]
+label=[]
+for i in range(len(X_train)):
+  if(len(label)==10):
+    break
+  if(classes[Y_train[i]] in label):
+    continue
+  else:
+    sample_image.append(X_train[i])
+    label.append(classes[Y_train[i]])
 
-# Create grid plot
-fig, axes = plt.subplots(2, 5, figsize=(10, 5))
-fig.suptitle("Fashion-MNIST Sample Images", fontsize=14)
-
-for i, (label, img) in enumerate(sample_images.items()):
-    ax = axes[i // 5, i % 5]
-    ax.imshow(img, cmap='gray')
-    ax.set_title(class_names[label])
-    ax.axis("off")
-
-plt.tight_layout()
-plt.show()
-
-# Log plot to wandb
-wandb.log({"Q1 Sample Images": wandb.Image(fig)})
-
-# End wandb run
-wandb.finish()
+wandb.log({"Question 1-Sample Images": [wandb.Image(img, caption=lbl) for img,lbl in zip(sample_image,label)]})
